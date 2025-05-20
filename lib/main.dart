@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'informationPage.dart';
+import 'texts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Speak Slowly',
+      title: AppText.title,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -29,9 +30,11 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(237, 235, 221, 34)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(237, 235, 221, 34),
+        ),
       ),
-      home: const MyHomePage(title: 'Speak Slowly'),
+      home: const MyHomePage(title: AppText.title),
     );
   }
 }
@@ -91,10 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
-          children:
-          [
-            infocard(hint:'TEST'),
-            infocard(hint:'TEST2'),
+          children: [
+            infocard(hint: AppText.information),
+            infocard(hint: AppText.map),
           ],
         ),
       ),
