@@ -94,10 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            infocard(hint: AppText.information),
-            infocard(hint: AppText.map),
-          ],
+          children: [],
         ),
       ),
     );
